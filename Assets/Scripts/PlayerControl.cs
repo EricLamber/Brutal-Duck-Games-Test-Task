@@ -26,14 +26,14 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Input.touchCount > 0)
+        {
+            var touch = Input.GetTouch(0);
+            DragLogic(touch);
+        }
+
         if (rb.velocity == new Vector3(0, 0, 0))
         {
-            if (Input.touchCount > 0)
-            {
-                var touch = Input.GetTouch(0);
-                DragLogic(touch);
-            }
-
             PlayerPosToReturn = transform.position;
         }
     }

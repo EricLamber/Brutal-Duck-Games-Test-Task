@@ -31,7 +31,7 @@ public class UIMapCopliteScript : MonoBehaviour
         var CurrentPosition = GameObject.Find("Player").transform.position.z;
         CurrentDistace = FinishPos.z - CurrentPosition; 
         var result = CurrentDistace / FullDistace * 100;
-        return result -= 100;
+        return result = 100 - result;
     }
 
     private void ChangeText(float percent)
